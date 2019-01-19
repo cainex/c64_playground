@@ -39,6 +39,7 @@ set_irq:
         jmp *
 
 irq:
+        inc VIC_BORDER_COL
         dec VIC_INT_REG
 
         lda VIC_RASTER_CNT
@@ -58,6 +59,7 @@ first_run:
         SetCharMemLocation(GetCharMemValue(charset))
 
 irq_cont:
+        dec VIC_BORDER_COL
         jmp $ea81
 
 screen_swap:
