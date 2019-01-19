@@ -1,6 +1,8 @@
-KICKASS_JAR = /mnt/c/Users/user/Documents/commodore64/KickAss/KickAss.jar
-VICE = /mnt/c/Users/user/Documents/commodore64/WinVICE-3.1-x64/x64.exe
-C64DEBUGGER = /mnt/c/Users/user/Documents/commodore64/C64Debugger/C64Debugger.exe
+
+
+KICKASS_JAR = $(KICKASS_HOME)/KickAss.jar
+VICE = $(VICE_HOME)/x64.exe
+C64DEBUGGER = $(C64DEBUGGER_HOME)/C64Debugger.exe
 
 ASM = java -jar $(KICKASS_JAR)
 
