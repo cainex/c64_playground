@@ -5,7 +5,7 @@ ifeq ($(OS),Windows_NT)
 	VICE = $(VICE_HOME)/x64.exe
 	C64DEBUGGER = $(C64DEBUGGER_HOME)/C64Debugger.exe
 else
-	ifeq ($(shell cat /proc/sys/kernel/osrelease | grep -o Microsoft))
+	ifeq ($(shell cat /proc/sys/kernel/osrelease | grep -o Microsoft),Microsoft)
 		KICKASS_JAR = $(KICKASS_HOME)/KickAss.jar
 		VICE = $(VICE_HOME)/x64.exe
 		C64DEBUGGER = $(C64DEBUGGER_HOME)/C64Debugger.exe
