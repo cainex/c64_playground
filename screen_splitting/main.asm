@@ -53,10 +53,12 @@ irq:
         sta VIC_RASTER_CNT
 
         SetCharMemLocation(GetCharMemValue(menu_charset))
-        lda #$00
+        lda #$06
         inc key_check_count
         cmp key_check_count
-        beq irq_cont
+        bne irq_cont
+        lda #$00
+        sta key_check_count
         jsr read_key
         jmp irq_cont
 

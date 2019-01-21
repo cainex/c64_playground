@@ -28,9 +28,11 @@ read_key:
 
 z_press:
     inc offset_y
+    inc offset_y
     jmp done_read_key
 
 w_press:
+    dec offset_y
     dec offset_y
     jmp done_read_key
 
