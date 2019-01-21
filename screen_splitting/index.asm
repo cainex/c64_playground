@@ -2,6 +2,7 @@
 #import "../common/cia1_regs.asm"
 #import "../common/cia2_regs.asm"
 #import "../common/vic_regs.asm"
+#import "../common/key_consts.asm"
 #import "defs.asm"
 
 * = $0801
@@ -11,6 +12,7 @@
 #import "main.asm"
 #import "init_clear_screen.asm"
 #import "blit_viewport.asm"
+#import "key_reader.asm"
 
 * = $5000
 #import "minirogue-c64-map.asm"

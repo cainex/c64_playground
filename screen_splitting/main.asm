@@ -36,7 +36,10 @@ set_irq:
         sta VIC_CNTRL1
 
         cli
-        jmp *
+
+gameloop:
+        jsr fill_map_offsets
+        jmp gameloop
 
 irq:
         inc VIC_BORDER_COL
@@ -50,6 +53,11 @@ irq:
         sta VIC_RASTER_CNT
 
         SetCharMemLocation(GetCharMemValue(menu_charset))
+        lda #$00
+        inc key_check_count
+        cmp key_check_count
+        beq irq_cont
+        jsr read_key
         jmp irq_cont
 
 first_run:

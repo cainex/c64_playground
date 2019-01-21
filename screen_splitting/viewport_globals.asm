@@ -14,3 +14,7 @@ offset:
 
 offset_y:
     .byte $06
+
+key_check_count:
+    .byte $00
+    
